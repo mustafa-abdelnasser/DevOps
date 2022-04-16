@@ -1,4 +1,9 @@
+#!/bin/bash
+
 GIT_VERSION="2.35.3"
+
+# all versions mirror
+#https://mirrors.edge.kernel.org/pub/software/scm/git/
 
 # install dnf
 sudo yum -y install dnf
@@ -31,5 +36,6 @@ make all doc info
 # System wide Git install
 sudo make install install-doc install-html install-info
 
+# clean up
 cd ..
 rm -rf git-${GIT_VERSION} git-${GIT_VERSION}.tar.gz
